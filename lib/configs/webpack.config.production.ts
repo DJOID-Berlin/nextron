@@ -17,7 +17,7 @@ let config: webpack.Configuration = merge(baseConfig, {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'production',
+      NODE_ENV: process.env.NODE_ENV,
       DEBUG_PROD: false,
       START_MINIMIZED: false,
     }),
